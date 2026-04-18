@@ -129,6 +129,8 @@
 </head>
 <body>
 
+    <a href="hobbies.html" style="position:fixed;top:12px;left:16px;z-index:999;color:#555;font-family:'Courier New',monospace;font-size:0.75rem;text-decoration:none;letter-spacing:0.05em;">&larr; back</a>
+
     <div class="arcade-cabinet">
         <div class="marquee"><h1>BACKROOMS</h1></div>
         
@@ -181,21 +183,54 @@
         ];
 
         const backroomsMap = [
-            [1,1,1,1,1,1,1,1,1,1,1,1],
-            [1,0,0,0,1,0,0,0,0,0,0,1],
-            [1,0,1,0,1,0,1,1,1,1,0,1],
-            [1,0,1,0,0,0,0,0,0,1,0,1],
-            [1,0,1,1,1,1,1,1,0,1,0,1],
-            [1,0,0,0,0,0,0,1,0,0,0,1],
-            [1,1,1,1,1,1,0,1,1,1,2,1],
-            [1,1,1,1,1,1,1,1,1,1,1,1]
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,1],
+            [1,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,1],
+            [1,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1],
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
         ];
 
         let worldMap = lobbyMap;
         let pX = 1.5, pY = 1.5, pDirX = 1, pDirY = 0, pPlaneX = 0, pPlaneY = 0.66;
         let gameState = 'MENU';
         let objects = [];
-        let entity = {x: 5, y: 5, active: false, phase: 0};
+        let entity = {x: 20, y: 20, active: false, phase: 0};
         const keys = {};
 
         const check = (x, y) => { 
@@ -219,7 +254,7 @@
                 worldMap = backroomsMap; 
                 objects = [{x: 5, y: 1.5, img: sprites.box}, {x: 10, y: 5, img: sprites.box}];
                 pX = 1.5; pY = 1.5; 
-                entity.active = true; entity.x = 10; entity.y = 1;
+                entity.active = true; entity.x = 37.5; entity.y = 37.5;
                 uiStatus.innerText = "LOC: [REDACTED]"; 
                 fadeLayer.style.opacity = 0;
             }, 1000);
@@ -243,8 +278,8 @@
 
             // Rotation
             let rotDir = 0;
-            if (keys['d'] || keys['arrowright']) rotDir -= 1;
-            if (keys['a'] || keys['arrowleft']) rotDir += 1;
+            if (keys['d'] || keys['arrowright']) rotDir += 1;
+            if (keys['a'] || keys['arrowleft']) rotDir -= 1;
             
             if (rotDir !== 0) {
                 let s = rotDir * 2.5 * dt;
@@ -291,19 +326,55 @@
         }
 
         function draw() {
-            ctx.fillStyle = "#000"; 
+            ctx.fillStyle = "#000";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             if (gameState === 'MENU') return;
 
-            // Background Ceiling/Floor with iridescent/Backrooms look
-            ctx.fillStyle = worldMap === lobbyMap ? "#333" : "#d4c8a1";
-            ctx.fillRect(0, 0, canvas.width, canvas.height/2);
-            ctx.fillStyle = worldMap === lobbyMap ? "#222" : "#8c7d5b";
-            ctx.fillRect(0, canvas.height/2, canvas.width, canvas.height/2);
+            const isBackrooms = worldMap !== lobbyMap;
+            const now = Date.now();
+            const H = canvas.height, W = canvas.width;
 
+            // Ceiling
+            if (isBackrooms) {
+                let cg = ctx.createLinearGradient(0, 0, 0, H/2);
+                cg.addColorStop(0, '#1a1508');
+                cg.addColorStop(1, '#c8b560');
+                ctx.fillStyle = cg;
+                ctx.fillRect(0, 0, W, H/2);
+                // Fluorescent light strips that flicker
+                for (let lx = 30; lx < W; lx += 55) {
+                    let flicker = 0.85 + 0.15 * Math.sin(now/80 + lx);
+                    let v = (230 * flicker)|0;
+                    ctx.fillStyle = `rgb(${v},${(v*0.92)|0},${(v*0.6)|0})`;
+                    ctx.fillRect(lx, H/2 - 8, 30, 8);
+                }
+            } else {
+                let cg = ctx.createLinearGradient(0, 0, 0, H/2);
+                cg.addColorStop(0, '#111');
+                cg.addColorStop(1, '#3a3a3a');
+                ctx.fillStyle = cg;
+                ctx.fillRect(0, 0, W, H/2);
+            }
+
+            // Floor
+            if (isBackrooms) {
+                let fg = ctx.createLinearGradient(0, H/2, 0, H);
+                fg.addColorStop(0, '#8c7d4a');
+                fg.addColorStop(1, '#1a1508');
+                ctx.fillStyle = fg;
+                ctx.fillRect(0, H/2, W, H/2);
+            } else {
+                let fg = ctx.createLinearGradient(0, H/2, 0, H);
+                fg.addColorStop(0, '#2a2a2a');
+                fg.addColorStop(1, '#0a0a0a');
+                ctx.fillStyle = fg;
+                ctx.fillRect(0, H/2, W, H/2);
+            }
+
+            // Raycasting walls with texture + fog
             let zBuf = [];
-            for(let x = 0; x < canvas.width; x++) {
-                let camX = 2 * x / canvas.width - 1;
+            for (let x = 0; x < W; x++) {
+                let camX = 2 * x / W - 1;
                 let rX = pDirX + pPlaneX * camX, rY = pDirY + pPlaneY * camX;
                 let mX = Math.floor(pX), mY = Math.floor(pY);
                 let dX = Math.abs(1/rX), dY = Math.abs(1/rY);
@@ -317,23 +388,42 @@
                     if (mY < 0 || mY >= worldMap.length || mX < 0 || mX >= worldMap[0].length) hit = 1;
                     else if (worldMap[mY][mX] === 1) hit = 1;
                 }
-                
-                let dist = side === 0 ? (mX - pX + (1 - sX) / 2) / rX : (mY - pY + (1 - sY) / 2) / rY;
+
+                let dist = side === 0 ? (mX - pX + (1 - sX)/2)/rX : (mY - pY + (1 - sY)/2)/rY;
                 zBuf[x] = dist;
-                let h = Math.floor(canvas.height / dist);
+                let h = Math.floor(H / dist);
                 let wall = (mY >= 0 && mY < worldMap.length && mX >= 0 && mX < worldMap[0].length) ? worldMap[mY][mX] : 1;
-                
-                // Color logic
-                if (wall === 3) ctx.fillStyle = "#0f0"; // Portal to backrooms
-                else if (wall === 2) ctx.fillStyle = "#f00"; // Exit backrooms
-                else ctx.fillStyle = worldMap === lobbyMap ? "#555" : "#d9d1a3"; // Backrooms yellow
-                
-                if (side === 1) ctx.globalAlpha = 0.7;
-                ctx.fillRect(x, canvas.height/2 - h/2, 1, h);
-                ctx.globalAlpha = 1;
+
+                // Texture coordinate (0..1 along wall)
+                let wallX = side === 0 ? (pY + dist * rY) : (pX + dist * rX);
+                wallX -= Math.floor(wallX);
+
+                // Shade: side darkening + distance fog
+                let shade = side === 1 ? 0.6 : 1.0;
+                let fog = Math.min(1.0, dist / 16.0);
+                shade *= (1.0 - fog * 0.88);
+
+                // Panel seam darkening
+                if (wallX < 0.03 || wallX > 0.97 || Math.abs(wallX - 0.5) < 0.025) shade *= 0.45;
+
+                if (wall === 3) {
+                    ctx.fillStyle = `rgba(0,${(210*shade)|0},0,1)`;
+                } else if (wall === 2) {
+                    ctx.fillStyle = `rgba(${(210*shade)|0},0,0,1)`;
+                } else if (isBackrooms) {
+                    // Classic backrooms yellow-beige with subtle warm variation
+                    let r = (220 * shade * (0.97 + wallX*0.06))|0;
+                    let g = (205 * shade * (0.95 + wallX*0.05))|0;
+                    let b = (145 * shade)|0;
+                    ctx.fillStyle = `rgb(${r},${g},${b})`;
+                } else {
+                    let v = (90 * shade)|0;
+                    ctx.fillStyle = `rgb(${v},${v},${v})`;
+                }
+                ctx.fillRect(x, H/2 - h/2, 1, h);
             }
 
-            // Sprites
+            // Sprites + entity
             let render = objects.map(o => ({...o, d: (pX-o.x)**2+(pY-o.y)**2, kind: 'obj'}));
             if (entity.active) render.push({x: entity.x, y: entity.y, d: (pX-entity.x)**2+(pY-entity.y)**2, kind: 'ent'});
             render.sort((a,b) => b.d - a.d);
@@ -343,32 +433,105 @@
                 let det = 1 / (pPlaneX * pDirY - pDirX * pPlaneY);
                 let tx = det * (pDirY * rx - pDirX * ry), ty = det * (-pPlaneY * rx + pPlaneX * ry);
                 if (ty > 0.1) {
-                    let sx = Math.floor((canvas.width/2) * (1 + tx/ty)), sh = Math.abs(Math.floor(canvas.height/ty));
+                    let sx = Math.floor((W/2) * (1 + tx/ty));
+                    let sh = Math.abs(Math.floor(H / ty));
                     if (s.kind === 'obj') {
-                        ctx.drawImage(s.img, sx - sh/2, canvas.height/2 - sh/2 + sh/4, sh, sh);
+                        if (sx + sh/2 > 0 && sx - sh/2 < W && zBuf[sx] > ty && s.img.complete && s.img.naturalWidth > 0)
+                            ctx.drawImage(s.img, sx - sh/2, H/2 - sh/2 + sh/4, sh, sh);
                     } else {
-                        // Spindly entity visual
-                        ctx.strokeStyle = "#000"; ctx.lineWidth = 2; ctx.beginPath();
-                        ctx.moveTo(sx, canvas.height/2 + sh/2);
-                        ctx.lineTo(sx + Math.sin(entity.phase)*20, canvas.height/2 - sh/2);
-                        ctx.stroke();
-                        // Head
-                        ctx.fillStyle = "#000";
+                        // Scary entity — tall dark figure, glowing red eyes
+                        let bodyW  = Math.max(2, sh * 0.09);
+                        let headR  = Math.max(2, sh * 0.13);
+                        let torsoT = H/2 - sh * 0.48;
+                        let torsoB = H/2 + sh * 0.28;
+                        let mid    = sx;
+
+                        // Only draw if in front of wall
+                        if (zBuf[Math.max(0, Math.min(W-1, sx))] < ty) return;
+
+                        ctx.save();
+                        ctx.shadowBlur = 0;
+
+                        // Dark aura
+                        let aura = ctx.createRadialGradient(mid, H/2, 0, mid, H/2, sh * 0.55);
+                        aura.addColorStop(0, 'rgba(30,0,0,0.5)');
+                        aura.addColorStop(1, 'rgba(0,0,0,0)');
+                        ctx.fillStyle = aura;
+                        ctx.fillRect(mid - sh*0.55, H/2 - sh*0.55, sh*1.1, sh*1.1);
+
+                        // Body
+                        ctx.fillStyle = '#060404';
+                        ctx.fillRect(mid - bodyW/2, torsoT + headR*2, bodyW, torsoB - torsoT - headR*2);
+
+                        // Long hanging arms (past knees)
+                        ctx.strokeStyle = '#080404';
+                        ctx.lineWidth = Math.max(1, bodyW * 0.55);
+                        ctx.lineCap = 'round';
+                        let armY = torsoT + headR*2 + (torsoB - torsoT - headR*2) * 0.18;
                         ctx.beginPath();
-                        ctx.arc(sx + Math.sin(entity.phase)*20, canvas.height/2 - sh/2, 5, 0, Math.PI*2);
+                        ctx.moveTo(mid - bodyW/2, armY);
+                        ctx.lineTo(mid - sh*0.28 - Math.sin(entity.phase*0.4)*sh*0.04, torsoB + sh*0.08);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.moveTo(mid + bodyW/2, armY);
+                        ctx.lineTo(mid + sh*0.28 + Math.sin(entity.phase*0.4)*sh*0.04, torsoB + sh*0.08);
+                        ctx.stroke();
+
+                        // Head (tall oval)
+                        ctx.fillStyle = '#0a0404';
+                        ctx.beginPath();
+                        ctx.ellipse(mid, torsoT + headR, headR * 0.65, headR, 0, 0, Math.PI*2);
                         ctx.fill();
+
+                        // Glowing red eyes
+                        let eyeY = torsoT + headR * 0.9;
+                        let eyeR = Math.max(0.8, headR * 0.22);
+                        ctx.shadowColor = '#ff1100';
+                        ctx.shadowBlur = 10;
+                        ctx.fillStyle = '#ff2200';
+                        ctx.beginPath();
+                        ctx.arc(mid - headR*0.28, eyeY, eyeR, 0, Math.PI*2);
+                        ctx.fill();
+                        ctx.beginPath();
+                        ctx.arc(mid + headR*0.28, eyeY, eyeR, 0, Math.PI*2);
+                        ctx.fill();
+
+                        // White pupil glint
+                        ctx.shadowBlur = 0;
+                        ctx.fillStyle = 'rgba(255,255,255,0.9)';
+                        ctx.beginPath(); ctx.arc(mid - headR*0.28 + eyeR*0.3, eyeY - eyeR*0.3, eyeR*0.25, 0, Math.PI*2); ctx.fill();
+                        ctx.beginPath(); ctx.arc(mid + headR*0.28 + eyeR*0.3, eyeY - eyeR*0.3, eyeR*0.25, 0, Math.PI*2); ctx.fill();
+
+                        ctx.restore();
                     }
                 }
             });
+
+            // Proximity danger vignette
+            if (entity.active) {
+                let ed = Math.sqrt((pX-entity.x)**2+(pY-entity.y)**2);
+                let danger = Math.max(0, 1 - ed / 12);
+                if (danger > 0) {
+                    let vg = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, W*0.75);
+                    vg.addColorStop(0.4, 'rgba(0,0,0,0)');
+                    vg.addColorStop(1.0, `rgba(160,0,0,${(danger * 0.75).toFixed(2)})`);
+                    ctx.fillStyle = vg;
+                    ctx.fillRect(0, 0, W, H);
+                }
+            }
         }
 
         let lastTimeLoop = performance.now();
         function loop(time) {
-            let dt = (time - lastTimeLoop) / 1000; 
-            if (dt > 0.1) dt = 0.1;
-            lastTimeLoop = time; 
-            update(dt); 
-            draw();
+            try {
+                let dt = (time - lastTimeLoop) / 1000;
+                if (dt > 0.1) dt = 0.1;
+                lastTimeLoop = time;
+                update(dt);
+                draw();
+            } catch(e) {
+                uiStatus.innerText = "ERR: " + e.message;
+            }
             requestAnimationFrame(loop);
         }
         requestAnimationFrame(loop);
